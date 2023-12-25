@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="esca.png" alt="cfpc" height="20">
+            </div>
+
+            <nav class="lien">
+                <ul>
+                    <li><a href="#lien-1">lien-1</a></li>
+                    <li><a href="#lien-2">lien-2</a></li>
+                    <li>
+                        <a id="lien-3" href="#lien-3"
+                            style="color:red;">lien-3</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section>
+            <form action id="forms">
+
+                <label for="firstName">
+                    Name :
+                </label>
+                <input type="text" name="firstName" id="firstName"
+                    placeholder="Entrer votre nom"
+                    autocomplete="on" required><br><br>
+
+                <label for="email">
+                    Email :
+                </label>
+                <input type="email" name="email" id="email"
+                    placeholder="Entrer votre mail"
+                    autocomplete="on" required><br><br>
+
+                <label for="email">
+                    Sexe :
+                </label>
+                <input type="radio" name="sexe" id=sexe" checked>F
+                <input type="radio" name="sexe" id=sexe">H<br>
+
+            </form>
+
+            <h1>Prof</h1>
+
+            <!-- Pour convertir les dimensions en vh (unité de hauteur relative), vous devez connaître la hauteur totale de la fenêtre ou du conteneur parent dans lequel ces dimensions seront utilisées. Supposons que la hauteur totale soit de 800 pixels. -->
+
+            <!-- Pour convertir les dimensions en vh, vous pouvez utiliser la formule suivante :
+
+        vh = (valeur en pixels / hauteur totale) * 100
+
+        Conversion de la taille de police (font-size) :
+        14px = (14 / 800) * 100vh ≈ 1.75vh
+
+        Ainsi, la taille de police convertie en vh serait d'environ 1.75vh.
+
+        Conversion de la hauteur (height) :
+        40px = (40 / 800) * 100vh = 5vh
+
+        La hauteur convertie en vh serait de 5vh.
+
+        Conversion de la largeur (width) :
+        100% représente déjà une valeur relative par rapport à la largeur du conteneur parent, il n'est donc pas nécessaire de la convertir en vh.
+
+        En résumé, les dimensions converties en vh seraient :
+
+        font-size: environ 1.75vh
+        height: 5vh
+        width: 100% (pas besoin de conversion) -->
+
+            5. Sélecteur de pseudo-classes :
+
+            <div>
+                <a href="#">mon lien</a>
+            </div><br><br>
+
+            6. Sélecteur de pseudo-éléments :
+
+            <p class="special"> Le sélecteur descendant permet de cibler un
+                élément spécifique qui est un descendant d'un autre élément. Il
+                utilise un espace pour séparer les deux sélecteurs. Par exemple,
+                div p cible tous les éléments &lt;p&gt; et &lt;/p&gt; qui sont
+                des descendants d'un élément +</p> <br><br>
+
+            1. Sélecteur descendant : 2. Sélecteur d'enfant direct :
+            <br><br>
+
+            <div>
+                <p class="special">
+                    Le sélecteur descendant permet de cibler un élément
+                    spécifique qui est un descendant d'un autre élément. Il
+                    utilise un espace pour séparer les deux sélecteurs. Par
+                    exemple, div p cible tous les éléments &lt;p&gt; qui sont
+                    des descendants d'un élément &lt;div&gt;.
+                </p>
+            </div><br><br>
+
+            3. Sélecteur de groupe :
+
+            <h3> zenwex-1</h3>
+            <h4> zenwex-2</h4>
+            <h5> zenwex-3</h5>
+            <h6> zenwex-4</h6>
+
+            <br><br>
+            4. Sélecteur de négation :
+
+            <p class="special">
+                Le sélecteur de négation permet de cibler les éléments qui ne
+                correspondent pas à un sélecteur spécifié. Il utilise le mot-clé
+                :not() suivi du sélecteur à exclure. Par exemple,
+                p:not(.special) cible tous les éléments &lt;p&gt; qui n'ont pas
+                la classe "special".
+            </p><br>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Obcaecati asperiores animi, assumenda accusamus perferendis
+                suscipit magnam excepturi nostrum? Eum labore possimus,
+                voluptate a praesentium nihil?
+            </p><br><br>
+
+            5. Sélecteur attribut avec valeur partielle :
+
+            <p class="special">Le sélecteur attribut avec valeur partielle
+                permet de cibler les éléments ayant un attribut spécifique dont
+                la valeur contient une sous-chaîne spécifiée. Il utilise
+                l'opérateur *= pour spécifier la sous-chaîne. Par exemple,
+                [href*="example"] cible tous les éléments ayant un attribut
+                "href" contenant le mot "example"
+            </p><br>
+
+            <a href="#">lien pour selecteur atttribut</a><br>
+            <a href="#example">lien pour selecteur atttribut</a><br>
+            <a href="#">lien pour selecteur atttribut</a><br><br>
+
+            1. Sélecteur adjacente :
+            <p class="special">
+                Le sélecteur adjacente cible un élément qui est immédiatement
+                précédé par un autre élément spécifique. Il utilise le signe
+                plus (+) pour séparer les deux sélecteurs. Par exemple, h1 + p
+                cible tous les éléments &lt;p&gt; qui sont immédiatement
+                précédés par un élément &lt;h3&gt; .
+            </p><br>
+
+            <h3> Titre H3</h3>
+
+            <p class="special">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit dolor cum fuga explicabo porro tempore atque quod
+                ducimus odio ab.
+            </p> <br>
+            <p class="special">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+                magni! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Minus non natus voluptas doloribus dolores, dolor dicta quam
+                porro unde aperiam.
+            </p><br>
+
+            <h3> Titre H3</h3>
+            <p class="special">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Aliquid dolorum recusandae repellat corrupti, quidem
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Sapiente, dicta neque eligendi ducimus totam nihil!
+            </p><br>
+            <p class="special">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Aliquid dolorum recusandae repel
+            </p><br><br>
+
+            3. Sélecteur de premier enfant :
+
+            <ul>
+                <li><a href="#lien-1">lien-1</a></li>
+                <li><a href="#lien-2">lien-2</a></li>
+                <li>
+                    <a id="lien-3" href="#lien-3">lien-3</a></li>
+            </ul> <br><br><br>
+
+            3. Sélecteur de n-ième enfant : <br><br>
+
+            Ce code CSS cible les éléments qui correspondent à la classe "box"
+            et qui sont des enfants impairs (premier, troisième, cinquième,
+            etc.) de leurs conteneurs parent ayant la classe "container-child".
+            Lorsque ces éléments sont sélectionnés, ils auront une couleur de
+            fond "lightgray" (gris clair).<br>
+
+            Explication détaillée :br
+
+            <ul>
+                <li>
+                    ".container-child" est un sélecteur de classe qui cible les
+                    éléments ayant la classe "container-child".
+                    ".box:nth-child(odd)" est un s</li>
+                <li>".box:nth-child(odd)" est un sélecteur de pseudo-classe qui
+                    cible les éléments enfants impairs de leurs parents.</li>
+                <li>
+                    "background-color: lightgray;" est une déclaration CSS qui
+                    définit la couleur de fond des éléments sélectionnés comme
+                    "lightgray" (gris clair).</li>
+            </ul>
+
+            <div class="container-child">
+
+                <div class="box">
+                    <img src="/team-01.jpg" alt="box-1">
+                    <h2>Tlile-1</h2>
+                    <p class="special">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ipsam in inventore consequuntur.</p>
+                </div>
+                <div class="box">
+                    <img src="/team-02.jpg" alt="box-2">
+                    <h2>Tlile-2</h2>
+                    <p class="special">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ipsam in inventore consequuntur.</p>
+                </div>
+                <div class="box">
+                    <img src="/team-03.jpg" alt="box-3">
+                    <h2>Tlile-3</h2>
+                    <p class="special">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ipsam in inventore consequuntur.</p>
+                </div>
+
+                <div class="box">
+                    <img src="/team-04.jpg" alt="box-4">
+                    <h2>Tlile-4</h2>
+                    <p class="special">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ipsam in inventore consequuntur.</p>
+                </div>
+                <div class="box">
+                    <img src="/team-05.png" alt="box-5">
+                    <h2>Tlile-5</h2>
+                    <p class="special">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ipsam in inventore consequuntur.</p>
+                </div>
+                <div class="box">
+                    <img src="/team-06.png" alt="box-6">
+                    <h2>Tlile-6</h2>
+                    <p class="special">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ipsam in inventore consequuntur.</p>
+                </div>
+                <div class="box">
+                    <img src="/team-07.jpg" alt="box-7">
+                    <h2>Tlile-7</h2>
+                    <p class="special">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ipsam in inventore consequuntur.</p>
+                </div>
+                <div class="box">
+                    <img src="/team-08.jpg" alt="box-8">
+                    <h2>Tlile-8 </h2>
+                    <p class="special">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ipsam in inventore consequuntur.</p>
+                </div>
+            </div>
+
+            <div class="container-contact">
+
+                <div class="img-tel">
+                    <img src="/Subscriber-amico.svg" alt="Subscriber" height="300">
+                </div>
+
+                <form>
+
+                    <div class="form-control" id="nom">
+                        <label for="firstName">Nom<sup>*</sup></label>
+                        <input type="text" name="firstName" id="firstName">
+                    </div>
+
+                    <div class="form-control" id="prenom">
+                        <label for="lastName">Prenom<sup>*</sup></label>
+                        <input type="text" name="lastName" id="lastName">
+
+                    </div>
+
+                    <div class="form-control" id="e-mail">
+                        <label for="email">E-mail<sup>*</sup></label>
+                        <input type="email" name="email" id="email">
+                    </div>
+
+                    <textarea rows="5"
+                        placeholder=" votre commentaire ici.."></textarea>
+
+                    <div class="btn1" id="btn1">
+                        <input type="submit" value="Annuler">
+                    </div>
+                    <div class="btn2" id="btn2">
+                        <input type="submit" value="Envoyer">
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div class="square"></div><br><br>
+
+            <!-- Explication :
+
+Nous avons un élément div avec la classe "square" qui représente notre carré rouge.
+La classe ".square" définit les styles de base du carré, y compris sa taille et sa couleur de fond.
+La propriété "transition" est utilisée pour spécifier la propriété "transform" qui sera animée, avec une durée de transition de 1 seconde et une fonction d'accélération "ease-in-out" pour une transition fluide.
+Lorsque nous survolons l'élément avec la souris (pseudo-classe ":hover"), la propriété "transform" est modifiée pour déplacer le carré horizontalement de 200 pixels vers la droite.
+Lorsque vous visualisez ce code dans un navigateur, vous pourrez voir le carré rouge se déplacer en douceur vers la droite lorsqu'il est survolé avec la souris. Cet exemple illustre l'utilisation de la propriété "transition" pour créer une animation de transition entre deux états d'un élément en CSS. -->
+
+<div class="circle"></div><br><br>
+
+
+<!-- Nous avons un élément div avec la classe "circle" qui représente notre cercle.
+La classe ".circle" définit les styles de base du cercle, y compris sa taille, sa forme (border-radius) et sa couleur de fond initiale.
+La propriété "position: relative;" est utilisée pour permettre une animation de rotation correcte.
+La propriété "animation" est utilisée pour spécifier l'animation "rotateAndChangeColor" qui sera appliquée à l'élément. L'animation durera 5 secondes et se répétera indéfiniment grâce à la valeur "infinite".
+L'animation "@keyframes" définit les différentes étapes de l'animation :
+
+À 0%, le cercle est au point de départ sans rotation et avec la couleur de fond "#ff6384".
+À 50%, le cercle est à mi-chemin de la rotation (180 degrés) et change de couleur de fond en "#36a2eb".
+À 100%, le cercle a fait une rotation complète (360 degrés) et change de couleur de fond en "#ff9f40".
+Lorsque vous visualisez ce code dans un navigateur, vous verrez le cercle effectuer une rotation continue tout en changeant de couleur à intervalles réguliers. Cet exemple illustre l'utilisation des animations CSS pour créer des effets visuels attrayants et dynamiques. -->
+
+
+
+
+            <div class="star-container">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+              </div>
+
+
+
+
+              <!-- Explication :
+
+Nous avons un conteneur div avec la classe "star-container" qui représente le conteneur des étoiles.
+À l'intérieur du conteneur, nous avons plusieurs divs avec la classe "star", qui représentent les étoiles individuelles.
+La classe ".star-container" définit la taille du conteneur et utilise la position relative pour positionner les étoiles à l'intérieur de celui-ci.
+La classe ".star" définit les styles de base des étoiles, y compris leur taille, leur couleur de fond blanche et leur forme en utilisant le border-radius.
+La propriété "position: absolute;" est utilisée pour positionner chaque étoile de manière indépendante à l'intérieur du conteneur.
+La propriété "animation" est utilisée pour spécifier l'animation "twinkling" qui sera appliquée à chaque étoile. L'animation dure 1,5 seconde et se répète indéfiniment grâce à la valeur "infinite".
+L'animation "@keyframes" définit les différentes étapes de l'animation :
+
+À 0%, l'étoile est complètement transparente (opacité 0) et à sa position initiale (translation sur l'axe Y de 0).
+À 50%, l'étoile devient opaque (opacité 1) et se déplace vers le haut de 20 pixels (translation sur l'axe Y de -20px).
+À 100%, l'étoile redevient transparente (opacité 0) et revient à sa position initiale (translation sur l'axe Y de 0).
+Lorsque vous visualisez ce code dans un navigateur, vous verrez les étoiles scintiller avec un effet d'apparition et de disparition, créant ainsi un effet scintillant. Cet exemple illustre comment utiliser les animations CSS pour ajouter des effets visuels intéressants à vos éléments. -->
+
+
+<div class="star2-container">
+    <div class="star2"></div>
+    <div class="star2"></div>
+    <div class="star2"></div>
+    <div class="star2"></div>
+    <div class="star2"></div>
+  </div>
+
+
+
+
+
+  <!-- Explication :
+
+Nous avons un conteneur div avec la classe "star-container" qui représente le conteneur des étoiles.
+À l'intérieur du conteneur, nous avons plusieurs divs avec la classe "star", qui représentent les étoiles individuelles.
+La classe ".star-container" définit la taille du conteneur et utilise la propriété "perspective" pour créer une perspective 3D.
+La classe ".star" définit les styles de base des étoiles, y compris leur taille et la propriété "transform-style" est définie sur "preserve-3d" pour permettre la transformation 3D.
+La pseudo-élément "::before" est utilisé pour représenter chaque étoile. Il est positionné absolument par rapport à l'étoile parente et a une couleur de fond jaune (#FFD700).
+La propriété "transform-origin" est utilisée pour définir l'origine de la transformation 3D de l'étoile.
+Les animations "@keyframes" "rotating" et "star-rotation" sont utilisées pour animer respectivement la rotation de l'ensemble des étoiles et la rotation individuelle de chaque étoile.
+Lorsque vous visualisez ce code dans un navigateur, vous verrez les étoiles tourner en 3D dans un effet de rotation continue. Cet exemple illustre comment utiliser les transformations 3D et les animations CSS pour créer des effets visuels impressionnants. -->
+
+
+
+
+<article>
+
+    <div class="circle-container">
+        <div class="circle"></div>
+      </div>
+</article>
+
+
+
+Explication :
+
+<!-- Nous avons un conteneur div avec la classe "circle-container" qui représente le conteneur du cercle.
+À l'intérieur du conteneur, nous avons un div avec la classe "circle", qui représente le cercle lui-même.
+La classe ".circle-container" définit la taille du conteneur et utilise la position relative pour positionner le cercle à l'intérieur.
+La classe ".circle" définit les styles de base du cercle, y compris sa taille, sa forme (border-radius), sa couleur de fond et sa position centrée à l'aide de translate et transform.
+La propriété "animation" est utilisée pour spécifier l'animation "pulsating" qui sera appliquée au cercle. L'animation dure 2 secondes et se répète indéfiniment grâce à la valeur "infinite".
+La classe ".circle.pulse" est utilisée pour modifier dynamiquement les styles du cercle lorsque la classe "pulse" est ajoutée à l'élément. Dans cet exemple, la taille du cercle est augmentée à 150px et la durée de l'animation est réduite à 1 seconde lorsque la classe "pulse" est appliquée.
+Lorsque vous visualisez ce code dans un navigateur, vous verrez le cercle effectuer une pulsation, se contractant et se dilatant à intervalles réguliers. Vous pouvez également ajouter ou supprimer la classe "pulse" dynamiquement pour modifier les styles du cercle pendant l'exécution de l'animation. Cet exemple met en évidence la façon dont vous pouvez utiliser les classes pour changer les styles et créer des effets d'animation dynamiques.
+        </section> -->
+
+
+        
+    </body>
+</html>
