@@ -27,21 +27,21 @@
         <section>
             <form action id="forms">
 
-                <label for="firstName">
+                <label for="Name">
                     Name :
                 </label>
-                <input type="text" name="firstName" id="firstName"
+                <input type="text" name="firstName" id="Name"
                     placeholder="Entrer votre nom"
                     autocomplete="on" required><br><br>
 
-                <label for="email">
+                <label for="Email">
                     Email :
                 </label>
-                <input type="email" name="email" id="email"
+                <input type="email" name="email" id="Email"
                     placeholder="Entrer votre mail"
                     autocomplete="on" required><br><br>
 
-                <label for="email">
+                <label for="emails">
                     Sexe :
                 </label>
                 <input type="radio" name="sexe" id=sexe" checked>F
@@ -80,7 +80,11 @@
 
             <div>
                 <a href="#">mon lien</a>
-            </div><br><br>
+            </div>
+            
+            
+            
+            <br><br>
 
             6. Sélecteur de pseudo-éléments :
 
@@ -88,7 +92,14 @@
                 élément spécifique qui est un descendant d'un autre élément. Il
                 utilise un espace pour séparer les deux sélecteurs. Par exemple,
                 div p cible tous les éléments &lt;p&gt; et &lt;/p&gt; qui sont
-                des descendants d'un élément +</p> <br><br>
+                des descendants d'un élément +</p> <br>
+
+<aside style="color:green;">
+    Bonne fête
+</aside>
+
+
+
 
             1. Sélecteur descendant : 2. Sélecteur d'enfant direct :
             <br><br>
@@ -127,6 +138,8 @@
                 voluptate a praesentium nihil?
             </p><br><br>
 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea omnis veniam, culpa sunt quod error quidem accusantium id numquam!</p>
+
             5. Sélecteur attribut avec valeur partielle :
 
             <p class="special">Le sélecteur attribut avec valeur partielle
@@ -138,8 +151,10 @@
             </p><br>
 
             <a href="#">lien pour selecteur atttribut</a><br>
-            <a href="#example">lien pour selecteur atttribut</a><br>
+            <a href="#examplefffffffffffff" id="example">lien pour selecteur atttribut</a><br>
             <a href="#">lien pour selecteur atttribut</a><br><br>
+
+<input type="email" name="" id=""><br>
 
             1. Sélecteur adjacente :
             <p class="special">
@@ -181,8 +196,7 @@
             <ul>
                 <li><a href="#lien-1">lien-1</a></li>
                 <li><a href="#lien-2">lien-2</a></li>
-                <li>
-                    <a id="lien-3" href="#lien-3">lien-3</a></li>
+                <li><a href="#lien-3">lien-3</a></li>
             </ul> <br><br><br>
 
             3. Sélecteur de n-ième enfant : <br><br>
@@ -208,9 +222,9 @@
                     "lightgray" (gris clair).</li>
             </ul>
 
-            <div class="container-child">
+            <div class="container-box">
 
-                <div class="box">
+                <div class="box" style="background-color: pink;">
                     <img src="/team-01.jpg" alt="box-1">
                     <h2>Tlile-1</h2>
                     <p class="special">Lorem ipsum dolor sit amet consectetur
@@ -270,7 +284,7 @@
                 <form>
 
                     <div class="form-control" id="nom">
-                        <label for="firstName">Nom<sup>*</sup></label>
+                        <label for="firstName">Nom</label><sup>*</sup>
                         <input type="text" name="firstName" id="firstName">
                     </div>
 
@@ -286,14 +300,15 @@
                     </div>
 
                     <textarea rows="5"
-                        placeholder=" votre commentaire ici.."></textarea>
+                        placeholder=" votre commentaire ici..">
+                    </textarea>
 
                     <div class="btn1" id="btn1">
                         <input type="submit" value="Annuler">
                     </div>
-                    <div class="btn2" id="btn2">
+                    <!-- <div class="btn2" id="btn2">
                         <input type="submit" value="Envoyer">
-                    </div>
+                    </div> -->
 
                 </form>
             </div>
@@ -354,10 +369,6 @@ Lorsque vous visualisez ce code dans un navigateur, vous verrez les étoiles sci
 
 
 <div class="star2-container">
-    <div class="star2"></div>
-    <div class="star2"></div>
-    <div class="star2"></div>
-    <div class="star2"></div>
     <div class="star2"></div>
   </div>
 

@@ -6,9 +6,13 @@
 
 
 }
+body{
+  background-color: #fff;
+}
 
 section {
     padding: 0 40px;
+
 
 }
 
@@ -62,12 +66,15 @@ div a {
 
 div a:hover {
     text-decoration: underline;
+    color:red;
+    font-size: 30px;
 }
 
 /* 6.	Sélecteur de pseudo-éléments : */
 
-p::first-line {
-    font-weight: bold;
+div p::first-line {
+    font-weight:bold;
+    color: rgb(255, 1, 183)
 }
 
 
@@ -76,7 +83,26 @@ p::first-line {
 div p {
     color: red;
 }
+aside{
+  position: relative;
+  font-size: 50px;
+  background-color:yellow;
+  color:rgb(0, 8, 255) !important;
+}
 
+aside::after{
+  content:"";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+ background-color: red;
+ position: absolute;
+ top:0;
+ left: 250px;
+
+ 
+ 
+}
 /* 3.	Sélecteur de groupe : */
 
 h3,
@@ -84,13 +110,14 @@ h4,
 h5,
 h6 {
     text-align: center;
-    color: mediumorchid
+    color: rgb(16, 180, 90)
 }
 
 /* 4.	Sélecteur de négation : */
 
 p:not(.special) {
-    color: green;
+    color: rgb(95, 241, 95);
+    background-color:black;
 }
 
 /* 5.	Sélecteur attribut avec valeur partielle : */
@@ -99,8 +126,9 @@ a[href*="example"] {
     background-color: yellow;
 }
 
+
 /* 1.	Sélecteur adjacente : */
-h3+p {
+h3 + p {
     font-style: italic;
     font-size: 23px;
 }
@@ -108,8 +136,8 @@ h3+p {
 
 /* 3.	Sélecteur de premier enfant : */
 ul li:first-child {
-    font-weight: 900;
-    font-size: x-large;
+    font-weight: 200;
+    font-size: 20px;
 }
 
 /* 4.	Sélecteur de dernier enfant : */
@@ -120,7 +148,7 @@ ul li:last-child {
 
 /* 3.	Sélecteur de n-ième enfant : */
 
-.container-child {
+.container-box {
     padding-top: 7vh;
     display: grid;
     grid-template-columns: repeat(auto-fit,
@@ -129,38 +157,46 @@ ul li:last-child {
 
 }
 
-.container-child .box {
-    overflow: hidden;
+.container-box .box {
+    /* overflow: hidden; */
     border: 1px solid rgb(229, 228, 228);
     border-radius: 7px;
 }
 
-.container-child .box:nth-child(odd) {
-    background-color: lightgray;
+.container-box .box:nth-child(odd) {
+    background-color:green !important;
 }
 
-.container-child .box:nth-child(even) {
-    background-color: rgb(251, 213, 213);
+.container-box .box:nth-child(even) {
+    background-color: rgb(205, 209, 207) ;
 }
 
-.container-child .box:nth-child(2) {
+
+
+.container-box .box:nth-child(2) {
     background-color: rgb(251, 213, 213);
     border-top: 20px solid red;
 }
 
-.container-child .box:nth-child(3) {
+.container-box .box:nth-child(3) {
     background-color: rgb(255, 255, 255);
     border-top: 10px solid red;
     margin-top: -10px;
 
 }
+.container-box .box:nth-child(3):hover{
+  background-color:  white !important;
+  margin-top: 0;
+  transition:  .8s ease-in-out;
+  
+}
 
-.container-child .box img {
+.container-box .box img {
     width: 100%;
 
 }
 
-.container-child .box p {
+.container-box .box p {
     padding: 7px;
     font-size: .5rem;
 
@@ -170,8 +206,7 @@ ul li:last-child {
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 10px;
-    margin-top: 20px;
-    padding-bottom: 25px;
+    margin: 30px 0;
 }
 .container-contact .img-tel{
     text-align: center;
@@ -180,13 +215,16 @@ ul li:last-child {
 .container-contact form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 15px;
     grid-template-areas:
-        "fN lN"
-        "mail mail"
-        "ta ta"
-        "btn1 btn2";
+    "fN lN"
+    "mail mail"
+    "ta ta"
+    "btn1 btn1"
+    ;
+        
+      
 }
 
 #nom {
@@ -206,13 +244,16 @@ textarea {
     resize: none;
 }
 
-#bn1 {
+#btn1 {
     grid-area: btn1;
 }
 
-#bn2 {
+/* #bn2 {
     grid-area: btn2;
-}
+    background-color: red;
+}  */
+
+
 
 
 .container-contact form label {
@@ -258,7 +299,8 @@ textarea {
     height: 100px;
     background-color: red;
     transition: transform 1s ease-in-out;
-  }
+   
+}
   
   .square:hover {
     transform: translateX(200px);
@@ -269,26 +311,29 @@ textarea {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: #ff6384;
+    background-color: #ff5479;
     position: relative;
     animation: rotateAndChangeColor 5s infinite;
+    -webkit-animation: rotateAndChangeColor 5s infinite;
+}
+  @keyframes rotateAndChangeColor {
+    0%{
+      transform: rotate(0deg);
+      background-color: #ff5479;  
+    }
+    50%{
+      transform: rotate(180deg);
+      background-color: #54b5ff;
+     }
+     100%{
+      transform: rotate(360deg);
+      background-color: #acf306;
+   
+}
   }
   
-  @keyframes rotateAndChangeColor {
-    0% {
-      transform: rotate(0deg);
-      background-color: #ff6384;
-    }
-    50% {
-      transform: rotate(180deg);
-      background-color: #36a2eb;
-    }
-    100% {
-      transform: rotate(360deg);
-      background-color: #ff9f40;
-    }
-  }
-
+  
+ 
 
 /* kkkkkkkkkkkkkkkkkkkkk */
   .star-container {
@@ -298,6 +343,8 @@ textarea {
     background-color: aqua;
   }
   
+
+
   .star {
     position: absolute;
     width: 100px;
@@ -305,30 +352,37 @@ textarea {
     background-color: #ff0000;
     border-radius: 50%;
     animation: twinkling 1.5s infinite;
-    -webkit-animation: twinkling 1.5s infinite;
+    -webkit-animation: twinkling 1.5s ease-in-out infinite;
 }
   
-  @keyframes twinkling {
-    0% {
-      opacity: 0;
-      transform: translateY(0);
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(0);
-    }
-  }
+@keyframes twinkling {
+  0%{
+    opacity:0 ;
+    transform: translateY(0);
+}  
+50%{
+    opacity:1 ;
+    transform: translateY(-30px);
+    background-color:green;
+}  
+100%{
+    opacity:0 ;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+}
+    
+}
 
 /* kkkkkkkkkkkk */
   .star2-container {
     width: 200px;
     height: 200px;
-    perspective: 800px;
+    perspective: 1000px;
     position: relative;
+    background-color: black;
   }
   
   .star2 {
@@ -337,9 +391,11 @@ textarea {
     left: 50%;
     width: 30px;
     height: 30px;
-    background-color: transparent;
+    background-color: red;
     transform-style: preserve-3d;
     animation: rotating 5s infinite linear;
+   
+    
   }
   
   .star2::before {
@@ -355,16 +411,17 @@ textarea {
     animation: star-rotation 5s infinite linear;
   }
   
-  @keyframes rotating {
+  @keyframes rotatingv {
     0% {
       transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
     100% {
       transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-    }
+    
+}
   }
   
-  @keyframes star-rotation {
+  @keyframes star-rotationc {
     0% {
       transform: rotateY(0deg);
     }
